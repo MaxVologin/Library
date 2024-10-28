@@ -33,6 +33,11 @@
 		94F6CE7D2CCEC8AC00326CAE /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6CE7C2CCEC8AC00326CAE /* CoreDataStorage.swift */; };
 		94F6CE7F2CCECAAC00326CAE /* CoreDataBooksStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6CE7E2CCECAAC00326CAE /* CoreDataBooksStorage.swift */; };
 		94F6CE862CCF018400326CAE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6CE852CCF018400326CAE /* Strings.swift */; };
+		94F6CE892CCF159A00326CAE /* EditBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6CE882CCF159A00326CAE /* EditBookCoordinator.swift */; };
+		94F6CE8B2CCF15E700326CAE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6CE8A2CCF15E700326CAE /* MainCoordinator.swift */; };
+		94F6CE8D2CCF168500326CAE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6CE8C2CCF168500326CAE /* Coordinator.swift */; };
+		94F6CE902CCF16F000326CAE /* MainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6CE8F2CCF16F000326CAE /* MainStorage.swift */; };
+		94F6CE922CCF17A600326CAE /* EditBookStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6CE912CCF17A600326CAE /* EditBookStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		94F6CE7C2CCEC8AC00326CAE /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		94F6CE7E2CCECAAC00326CAE /* CoreDataBooksStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBooksStorage.swift; sourceTree = "<group>"; };
 		94F6CE852CCF018400326CAE /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		94F6CE882CCF159A00326CAE /* EditBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookCoordinator.swift; sourceTree = "<group>"; };
+		94F6CE8A2CCF15E700326CAE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		94F6CE8C2CCF168500326CAE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		94F6CE8F2CCF16F000326CAE /* MainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStorage.swift; sourceTree = "<group>"; };
+		94F6CE912CCF17A600326CAE /* EditBookStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 		94385C912CCA56D200AFA58C /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				94F6CE8E2CCF16CF00326CAE /* Protocols */,
 				94F6CE7E2CCECAAC00326CAE /* CoreDataBooksStorage.swift */,
 				94F6CE7C2CCEC8AC00326CAE /* CoreDataStorage.swift */,
 				94DBDADE2CC6641500C739CB /* CoreDataStorage.xcdatamodeld */,
@@ -139,6 +150,7 @@
 		94DBDAEC2CC6922C00C739CB /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				94F6CE872CCF158400326CAE /* Protocols */,
 				94DBDAF02CC694A200C739CB /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -239,6 +251,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		94F6CE872CCF158400326CAE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94F6CE8C2CCF168500326CAE /* Coordinator.swift */,
+				94F6CE8A2CCF15E700326CAE /* MainCoordinator.swift */,
+				94F6CE882CCF159A00326CAE /* EditBookCoordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94F6CE8E2CCF16CF00326CAE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94F6CE8F2CCF16F000326CAE /* MainStorage.swift */,
+				94F6CE912CCF17A600326CAE /* EditBookStorage.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,14 +340,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F6CE922CCF17A600326CAE /* EditBookStorage.swift in Sources */,
 				94385C8B2CC968CB00AFA58C /* SortingView.swift in Sources */,
 				94385C8D2CC96C5C00AFA58C /* SortingState.swift in Sources */,
 				94F6CE732CCC0B3E00326CAE /* InputFieldError.swift in Sources */,
 				940E01E12CCBBE65000EE9A7 /* EditBookVM.swift in Sources */,
 				94DBDAF12CC694A200C739CB /* AppCoordinator.swift in Sources */,
+				94F6CE902CCF16F000326CAE /* MainStorage.swift in Sources */,
 				94DBDAF72CC6A3EB00C739CB /* MainVM.swift in Sources */,
 				94F6CE792CCE8E2C00326CAE /* InputFields.swift in Sources */,
 				94DBDAF52CC6A3E400C739CB /* MainVC.swift in Sources */,
+				94F6CE8D2CCF168500326CAE /* Coordinator.swift in Sources */,
 				94385C902CCA4B2500AFA58C /* SystemAlertArguments.swift in Sources */,
 				94F6CE7B2CCE9D8500326CAE /* InputFieldHandler.swift in Sources */,
 				94F6CE862CCF018400326CAE /* Strings.swift in Sources */,
@@ -327,10 +361,12 @@
 				940E01DF2CCBBDDB000EE9A7 /* EditBookVC.swift in Sources */,
 				94DBDB012CC78BAD00C739CB /* BookModel.swift in Sources */,
 				94F6CE7F2CCECAAC00326CAE /* CoreDataBooksStorage.swift in Sources */,
+				94F6CE892CCF159A00326CAE /* EditBookCoordinator.swift in Sources */,
 				940E01DD2CCBA4B6000EE9A7 /* Observable.swift in Sources */,
 				94DBDAFC2CC78A3900C739CB /* BookCell.swift in Sources */,
 				94F6CE6E2CCBFF7000326CAE /* InputField.swift in Sources */,
 				94DBDAFF2CC78B7200C739CB /* LibrarySection.swift in Sources */,
+				94F6CE8B2CCF15E700326CAE /* MainCoordinator.swift in Sources */,
 				94DBDAD62CC6641500C739CB /* AppDelegate.swift in Sources */,
 				94DBDAFA2CC788A700C739CB /* LibraryTableView.swift in Sources */,
 			);

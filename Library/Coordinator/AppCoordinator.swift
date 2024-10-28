@@ -7,16 +7,7 @@
 
 import UIKit
 
-protocol Coordinator: AnyObject {
-    var navigationController: UINavigationController { get set }
-
-    func start()
-    func systemAlert(arguments: SystemAlertArguments)
-    func openEditBook(with: BookModel?)
-    func dismiss()
-}
-
-final class AppCoordinator: Coordinator {
+final class AppCoordinator: Coordinator, MainCoordinator, EditBookCoordinator {
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController

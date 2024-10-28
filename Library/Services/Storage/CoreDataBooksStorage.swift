@@ -7,7 +7,7 @@
 
 import CoreData
 
-final class CoreDataBooksStorage {
+final class CoreDataBooksStorage: MainStorage, EditBookStorage {
 
     init(coreDataStorage: CoreDataStorage = CoreDataStorage.shared) {
         self.coreDataStorage = coreDataStorage

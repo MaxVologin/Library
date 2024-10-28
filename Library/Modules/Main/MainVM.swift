@@ -8,8 +8,8 @@
 import Foundation
 
 protocol MainViewModel: SortingDelegate, LibraryTableViewDelegate {
-    var coordinator: Coordinator? { get set }
-    var booksStorage: CoreDataBooksStorage? { get set }
+    var coordinator: MainCoordinator? { get set }
+    var booksStorage: MainStorage? { get set }
     var books: Observable<[BookModel]> { get }
     var sortingState: Observable<SortingState> { get }
 
@@ -21,9 +21,9 @@ protocol MainViewModel: SortingDelegate, LibraryTableViewDelegate {
 
 final class MainVM: MainViewModel {
 
-    weak var coordinator: Coordinator?
+    weak var coordinator: MainCoordinator?
     
-    var booksStorage: CoreDataBooksStorage?
+    var booksStorage: MainStorage?
 
     var books: Observable<[BookModel]> = Observable([])
 

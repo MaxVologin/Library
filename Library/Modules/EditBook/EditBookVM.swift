@@ -8,8 +8,8 @@
 import Foundation
 
 protocol EditBookViewModel: InputFieldHandler {
-    var coordinator: Coordinator? { get set }
-    var booksStorage: CoreDataBooksStorage? { get set }
+    var coordinator: EditBookCoordinator? { get set }
+    var booksStorage: EditBookStorage? { get set }
     var book: BookModel? { get set }
     var isNewBook: Observable<Bool> { get }
     var bookErrors: Observable<[InputFields: InputFieldError]> { get }
@@ -19,9 +19,9 @@ protocol EditBookViewModel: InputFieldHandler {
 
 final class EditBookVM: EditBookViewModel {
 
-    weak var coordinator: Coordinator?
+    weak var coordinator: EditBookCoordinator?
 
-    var booksStorage: CoreDataBooksStorage?
+    var booksStorage: EditBookStorage?
 
     var book: BookModel? {
         didSet {
